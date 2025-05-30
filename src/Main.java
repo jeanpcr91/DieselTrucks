@@ -263,7 +263,7 @@ public class Main {
 
          */
         //COUNTDOWN
-
+        /*
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("How many seconds to countdown from?: ");
@@ -278,7 +278,47 @@ public class Main {
 
         scanner.close();
 
+         */
+        //NESTED LOOPS
+        /*
+        for (int i = 1; i <= 3; i++){
 
+            for(int j = 1; j <= 9; j++){
+
+                System.out.print(j + " ");
+
+            }
+            System.out.println();
         }
+
+         */
+        //MATRIX GRAPHICS
+
+        int rows;
+        int columns;
+        String symbol;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to Matrix Graph");
+        System.out.println("You must insert the folowing data: ");
+        System.out.print("choose the number of rows: ");
+        rows = scanner.nextInt();
+        System.out.print("choose the number of columns: ");
+        columns = scanner.nextInt();
+        System.out.print("choose the String you want: ");
+        symbol = scanner.next();
+
+        System.out.println("The matrix will be: " + rows + "*" + columns + " of " + symbol);
+
+        for (int i = 1; i <= rows; i++){
+            for (int j = 1; j <= columns; j++){
+                System.out.print(symbol + " ");
+            }
+            System.out.println();
+        }
+
+
+    }
 
     }
