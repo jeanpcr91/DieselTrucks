@@ -2,6 +2,8 @@ import java.lang.foreign.SymbolLookup;
 import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
@@ -293,7 +295,7 @@ public class Main {
 
          */
         //MATRIX GRAPHICS
-
+        /*
         int rows;
         int columns;
         String symbol;
@@ -317,8 +319,53 @@ public class Main {
             }
             System.out.println();
 
+         */
+        // TRY, CATCH AND FINALLY STATEMENT
+        /*
+        try {
+            int[] myNumbers = {1, 2, 3};
+            System.out.println(myNumbers[10]);
+        }
+        catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
+        finally {
+            System.out.println("The 'try catch' is finished.");
         }
 
-    }
+         */
+        //EXAMEN SORPRESA
+        /*
+        int i;
+        for(i = 20; i > 0; i-- ){
+
+            System.out.println(i);
+        }
+
+         */
+        /*
+        String text1 = "Chocolate no come chocolate porque el chocolate le hace daño";
+        Pattern choc = Pattern.compile("daño", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = choc.matcher(text1);
+        boolean mathcFound = matcher.find();
+        if (mathcFound){
+
+            System.out.printf("Creo que vamos bien");
+        }
+        else{
+            System.out.println("Pipipiiipiiiiii");
+        }
+
+         */
+        //METHOD DISCUSS
+
+        //method = a block of reusable code that is executed when called ()
+
+        System.out.println("Happy Birthday to you!");
+        System.out.println("Happy Birthday dear you!");
+        System.out.println("You are x years old!");
+        System.out.println("Happy Birthday to you!\n");
+
+        }
 
     }
