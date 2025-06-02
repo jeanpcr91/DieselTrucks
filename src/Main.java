@@ -316,8 +316,8 @@ public class Main {
                 System.out.print(symbol + " ");
             }
             System.out.println();
-        }
 
+        }
 
     }
 
