@@ -4,9 +4,11 @@ import dto.Teacher;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Classroom {
-    public static void main(String args[]){
+    public static void main(String[] args){
+        /*
         List<Student> students = new ArrayList<Student>();
         Student student1 = new Student("Jean Paul", "Cruz Rivas", 33, 9);
         students.add(student1);
@@ -39,5 +41,86 @@ public class Classroom {
             System.out.println(teacher.getString());
         }
 
+         */
+        Scanner input = new Scanner(System.in);
+        int option = 0;
+
+        String name1;
+        String lastName;
+        int age;
+        int grade;
+        String topic;
+
+        do {
+
+            System.out.println("Welcome to Classroom\nChoose an option:");
+            System.out.println("1 Add a new student");
+            System.out.println("2 Add a ner teacher");
+            System.out.println("3 Show the data");
+            System.out.println("4 Exit");
+
+            System.out.print("Write your option: ");
+            option = input.nextInt();
+
+
+
+
+
+
+            switch (option){
+
+                case 1:
+
+                    System.out.print("Enter student's name: ");
+                    name1 = input.next();
+                    System.out.print("Enter student's last name: ");
+                    lastName = input.next();
+                    System.out.print("Enter student's age: ");
+                    age = input.nextInt();
+                    System.out.print("Enter student's grade: ");
+                    grade = input.nextInt();
+
+                    List<Student> students = new ArrayList<Student>();
+                    Student student1 = new Student(name1, lastName, age, grade);
+                    students.add(student1);
+                    System.out.println(student1.getString());
+
+
+
+
+                    break;
+
+
+                case 2:
+
+                    System.out.println("You have choose option 2");
+
+                    break;
+
+                case 3:
+
+                    System.out.println("You have choose option 3");
+
+                    break;
+
+            }
+
+
+                
+        }
+
+        while (option!=4);
+
+        if (option == 4){
+
+            System.out.println("thanks for using it");
+
+        }
+
+        input.close();
+    }
+
+    private static void extracted(String name1, String lastName, int age, int grade) {
+        System.out.println("name: " + name1 + " lastname: " + lastName + " age: " + age + " grade: " + grade);
     }
 }
