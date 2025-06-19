@@ -358,13 +358,100 @@ public class Main {
 
          */
         //METHOD DISCUSS
-
         //method = a block of reusable code that is executed when called ()
-
+        /*
         System.out.println("Happy Birthday to you!");
         System.out.println("Happy Birthday dear you!");
         System.out.println("You are x years old!");
         System.out.println("Happy Birthday to you!\n");
+
+         */
+        //BANKING PROGRAM
+
+        Scanner scanner = new Scanner(System.in);
+        double balance = 0;
+        boolean isRunning = true;
+        int choice;
+
+        while (isRunning){
+
+            System.out.println("***************");
+            System.out.println("BANKING PROGRAM");
+            System.out.println("***************");
+            System.out.println("1. Show Balance");
+            System.out.println("2. Deposit");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Exit");
+
+            System.out.print("Enter your choice (1-4): ");
+            choice = scanner.nextInt();
+
+            switch (choice){
+
+                case 1 -> showBalance(balance);
+                case 2 -> balance = balance + deposit();
+                case 3 -> balance = balance - withdraw(balance);
+                case 4 -> isRunning = false;
+
+                default -> System.out.println("invalid choice");
+            }
+
+        }
+
+        System.out.println("****************************");
+        System.out.println("Thank You, have a nice day!!");
+        System.out.println("****************************");
+
+        scanner.close();
+
+        }
+
+        static void showBalance(double balance){
+            System.out.println("***************");
+            System.out.printf("S %.2f\n", balance);
+            System.out.println("***************");
+        }
+        static double deposit (){
+
+            Scanner scanner1 = new Scanner(System.in);
+            double amount;
+            System.out.println("Enter an amount to be deposited: ");
+            amount = scanner1.nextDouble();
+
+            if(amount < 0){
+                System.out.println("***************");
+                System.out.println("Amount can't be negative");
+                System.out.println("***************");
+                return 0;
+            }
+            else {
+                System.out.println("***************");
+                System.out.println("The amount has been deposited");
+                System.out.println("***************");
+                return amount;
+            }
+
+        }
+        static double withdraw (double balance){
+
+            double amount;
+            Scanner scanner2 = new Scanner(System.in);
+
+            System.out.print("Enter the amount to be withdraw: ");
+            amount = scanner2.nextDouble();
+
+            if (amount>balance){
+                System.out.println("INSUFFICIENT FUNDS");
+                return 0;
+            }
+            else if (amount < 0) {
+                System.out.println("Amount can´t be negative");
+                return 0;
+            }
+            else {
+                return amount;
+            }
+
 
         }
 
