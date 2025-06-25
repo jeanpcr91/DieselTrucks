@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class Main {
 
-    public static void main(String [] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         /*
         boolean isStudent = true;
         boolean isSenior;
@@ -367,7 +367,7 @@ public class Main {
 
          */
         //BANKING PROGRAM
-
+        /*
         Scanner scanner = new Scanner(System.in);
         double balance = 0;
         boolean isRunning = true;
@@ -452,7 +452,355 @@ public class Main {
                 return amount;
             }
 
+         */
+        //JAVA DICE ROLLER PROGRAM
+        /*
+        DECLARE VARIABLES
+        GET # OF DICE FROM THE USER
+        CHECK IF # OF DICE > 0
+        ROLL ALL THE DICE
+        GET THE TOTAL
+        DISPLAY ASCII OF DICE
+         */
+        /*
+
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        int numOfDice;
+        int total = 0;
+
+        System.out.print("Enter the # of dice to roll: ");
+        numOfDice = scanner.nextInt();
+
+        if (numOfDice > 0){
+            for(int i = 0; i < numOfDice; i++){
+                int roll = random.nextInt(1,7);
+                printDie(roll);
+                System.out.println("You rolled: " + roll);
+                total += roll;
+            }
+            System.out.println("Total: " + total);
+        }
+        else {
+            System.out.println("# of dice must be greater than 0");
+        }
+
+        scanner.close();
+
+         */
+        //ARRAYS
+        /*
+        String[] fruits = {"apple", "orange", "banana", "coconut"};
+
+        //fruits[2]  = "pineapple";
+
+        //System.out.println(fruits[3]);
+
+        for (int i = 0; i < fruits.length; i++){
+
+            System.out.print(fruits[i] + " ");
+        }
+
+         */
+        /*
+        int[] numbers = {1, 9, 2, 8, 3, 5, 4};
+        int target = 2;
+        boolean isFound = false;
+
+        for (int i = 0; i < numbers.length; i++){
+
+            if (target == numbers[i]){
+                System.out.println("Element found at index: " + i);
+                isFound = true;
+                break;
+            }
+        }
+        if (!isFound){
+            System.out.println("Element not found in the array");
+        }
+
+         */
+        //SERCH IN AN ARRAY
+        /*
+        String[] fruits = {"apple", "orange", "banana"};
+        String target = "orange";
+        boolean isFound = false;
+
+        for (int i = 0; i < fruits.length; i++) {
+
+            if (fruits[i].equals(target)) {
+                System.out.println("Element found at index: " + i);
+                isFound = true;
+                break;
+            }
 
         }
 
+         */
+    /*
+    static void printDie (int roll){
+
+        String dice1 = """
+                 -------
+                |       |
+                |   ●   |
+                |       |
+                 -------
+                """;
+        String dice2 = """
+                 -------
+                | ●     |
+                |       |
+                |     ● |
+                 -------
+                """;
+        String dice3 = """
+                 -------
+                | ●     |
+                |   ●   |
+                |     ● |
+                 -------
+                """;
+        String dice4 = """
+                 -------
+                | ●   ● |
+                |       |
+                | ●   ● |
+                 -------
+                """;
+        String dice5 = """
+                 -------
+                | ●   ● |
+                |   ●   |
+                | ●   ● |
+                 -------
+                """;
+        String dice6 = """
+                 -------
+                | ● ● ● |
+                |       |
+                | ● ● ● |
+                 -------
+                """;
+
+        switch (roll){
+            case 1 -> System.out.println(dice1);
+            case 2 -> System.out.println(dice2);
+            case 3 -> System.out.println(dice3);
+            case 4 -> System.out.println(dice4);
+            case 5 -> System.out.println(dice5);
+            case 6 -> System.out.println(dice6);
+            default -> System.out.println("Invalid roll");
+        }
+
     }
+
+     */
+        //VARARGS
+        /*
+        System.out.println(add(1, 2, 3, 4));
+        System.out.println(average(1, 2, 3, 4));
+
+         */
+        //2D ARRAYS
+        /*
+        String [] fruits = {"apple", "orange", "banana"};
+        String [] vegetables = {"potato", "onion", "carrot"};
+        String [] meats = {"chicken", "pork", "beef", "fish"};
+
+        String [][] groceries = {fruits, vegetables, meats};
+
+        for (String[] foods : groceries){
+            for (String food : foods){
+                System.out.print(food + " ");
+            }
+            System.out.println();
+        }
+
+         */
+        /*
+        char[][] telephone = {{'1', '2', '3'},
+                              {'4', '5', '6'},
+                              {'7', '8', '9'},
+                              {'*', '0', '#'}};
+
+        for (char[] row : telephone){
+            for (char number : row) {
+                System.out.print(number + " ");
+            }
+            System.out.println();
+        }}
+
+         */
+        //JAVA QUIZ GAME
+        /*
+        String [] questions = {"What is the main function of a router?",
+                               "Which part of the computer is considered the brain?",
+                               "What year was Facebook launched?",
+                               "Who is known as the father of computer?",
+                               "What was the first programming language?"};
+        String [][] options = {{"1. Storing files", "2. Encrypting data", "3. Directing internet traffic", "4. Managing passwords"},
+                               {"1. CPU", "2. Hard Drive", "3. RAM", "4. GPU"},
+                               {"1. 2000", "2. 2004", "3. 2006", "4. 2008"},
+                               {"1. Steve Jobs", "2. Bill Gates", "3. Alan Turing", "4. Charles Babbage"},
+                               {"1. COBOL", "2. C", "3. Fortran", "4. Assembly"},};
+
+        int [] answers = {3, 1, 2, 4, 3};
+        int score = 0;
+        int guess;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("******************************");
+        System.out.println("Welcome to the Java Quiz Game!");
+        System.out.println("******************************");
+
+        for (int i = 0; i < questions.length; i++){
+            System.out.println(questions[i]);
+
+            for (String option : options[i]){
+                System.out.println(option);
+            }
+            System.out.print("Enter your guess: ");
+            guess = scanner.nextInt();
+
+            if (guess == answers[i]){
+                System.out.println("********");
+                System.out.println("CORRECT!");
+                System.out.println("********");
+                score ++;
+            }
+            else {
+                System.out.println("********");
+                System.out.println(" WRONG! ");
+                System.out.println("********");
+            }
+        }
+
+        System.out.println("Your final scores is: " + score + " out of " + questions.length);
+
+         */
+        //ROCK PAPER SCISSORS
+        /*
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        String [] choices = {"rock", "paper", "scissors"};
+        String playerChoice;
+        String computerChoice;
+        String playAgain = "yes";
+
+        do {
+            System.out.print("Enter your move (rock, paper, scissors): ");
+            playerChoice = scanner.next().toLowerCase();
+
+            if (!playerChoice.equals("rock") &&
+                    !playerChoice.equals("paper") &&
+                    !playerChoice.equals("scissors")){
+                System.out.println("Invalid choice");
+                continue;
+            }
+
+            computerChoice = choices[random.nextInt(3)];
+            System.out.println("Computer choice: " + computerChoice);
+
+            if (playerChoice.equals(computerChoice)){
+                System.out.println("It's a tie!");
+            }
+            else if ((playerChoice.equals("rock") && computerChoice.equals("scissors")) ||
+                    (playerChoice.equals("paper") && computerChoice.equals("rock")) ||
+                    (playerChoice.equals("scissors") && computerChoice.equals("paper"))){
+                System.out.println("You win!");
+            }
+
+            else {
+                System.out.println("You lose!");
+            }
+
+            System.out.print("Play again (yes/no): ");
+            playAgain = scanner.next().toLowerCase();
+        }
+        while (playAgain.equals("yes"));
+
+        System.out.println("Thanks for playing!");
+
+         */
+        //SLOT MACHINE PROGRAM
+
+        Scanner scanner = new Scanner(System.in);
+        int balance = 100;
+        int bet;
+        int payout;
+        String[] row;
+
+        System.out.println("*************************");
+        System.out.println("  Welcome to Java Slots  ");
+        System.out.println("Symbols: 🍒 🍉 🍋 🔔 ⭐ ");
+        System.out.println("*************************");
+
+        while(balance > 0){
+            System.out.println("Current balance: $" + balance);
+            System.out.println("Place your bet amount: ");
+            bet = scanner.nextInt();
+
+            if (bet > balance){
+                System.out.println("INSUFFICIENT FUNDS");
+                continue;
+            }
+            else if (bet <=0){
+                System.out.println("Bet must be greater than 0");
+                continue;
+            }
+            else {
+                balance -= bet;
+            }
+            System.out.println("Spinning...");
+            row = spinRow();
+            printRow(row);
+        }
+
+
+
+
+    }
+
+    //VARARGS variable arguments methods
+    /*
+    static int add(int... numbers){
+
+        int sum = 0;
+        for (int number : numbers){
+            sum+= number;
+        }
+        return sum;
+
+    }
+    static double average(double... numbers){
+        double total = 0;
+        for (double number : numbers){
+            total += number;
+        }
+        return total / numbers.length;
+    }
+
+     */
+    //JAVA SLOTS MACHINE methods
+    static String [] spinRow () {
+
+        String [] symbols = {"🍒", "🍉", "🍋", "🔔", "⭐"};
+        String [] row = new String [3];
+        Random random = new Random();
+
+        for(int i = 0; i < 3; i++){
+
+            row[i] = symbols[random.nextInt(symbols.length)];
+
+        }
+        return row;
+    }
+    static void printRow(String[] row){
+        System.out.println("**************");
+        System.out.println(" " + row[0] + " | " + row[1] + " | " + row[2]);
+        System.out.println("**************");
+    }
+
+}
